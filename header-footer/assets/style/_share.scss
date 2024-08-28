@@ -1,0 +1,85 @@
+/* ======================================
+  FONT TYPE
+====================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'avertaregular';
+  src: url('fonts/averta-regular-webfont.eot');
+  src: url('fonts/averta-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/averta-regular-webfont.woff2') format('woff2'),
+  url('fonts/averta-regular-webfont.woff') format('woff'),
+  url('fonts/averta-regular-webfont.ttf') format('truetype'),
+  url('fonts/averta-regular-webfont.svg#avertaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'avertasemibold';
+  src: url('fonts/averta-semibold-webfont.eot');
+  src: url('fonts/averta-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/averta-semibold-webfont.woff2') format('woff2'),
+  url('fonts/averta-semibold-webfont.woff') format('woff'),
+  url('fonts/averta-semibold-webfont.ttf') format('truetype'),
+  url('fonts/averta-semibold-webfont.svg#avertasemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* ======================================
+  STYLE VARIABLES
+====================================== */
+$font : 'avertaregular','Noto Sans Thai', sans-serif;
+$font_semi : 'avertasemibold','Noto Sans Thai', sans-serif;
+
+// COLOR
+$color_black : #111111;
+$color_blue : #0151A7;
+$color_text_black : #262626;
+$color_gray : #BFBFBF;
+
+@mixin gradient-blue {
+ background: #0151a7;
+ background: -moz-linear-gradient(left, #0151a7 0%, #026ddf 50%, #0151a7 100%);
+ background: -webkit-gradient(left top, right top, color-stop(0%, #0151a7), color-stop(50%, #026ddf), color-stop(100%, #0151a7));
+ background: -webkit-linear-gradient(left, #0151a7 0%, #026ddf 50%, #0151a7 100%);
+ background: -o-linear-gradient(left, #0151a7 0%, #026ddf 50%, #0151a7 100%);
+ background: -ms-linear-gradient(left, #0151a7 0%, #026ddf 50%, #0151a7 100%);
+ background: linear-gradient(to right, #0151a7 0%, #026ddf 50%, #0151a7 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0151a7', endColorstr='#0151a7', GradientType=1 );
+}
+
+@mixin reset-button {
+  background: none;
+  border:none;
+  padding: 0;
+  &:focus,&:active{
+    border:none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+@mixin transition($property){
+  @if($property) == 'auto' {
+  -webkit-transition: all 250ms ease 0s;
+      -moz-transition:all 250ms ease 0s;
+      -ms-transition: all 250ms ease 0s;
+      -o-transition: all 250ms ease 0s;
+          transition: all 250ms ease 0s;
+  } @else {
+    -webkit-transition: $property;
+        -moz-transition:$property;
+        -ms-transition: $property;
+        -o-transition: $property;
+            transition: $property;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
