@@ -2,7 +2,7 @@
 	font-family: $font;
 	strong{
 		font-family: $font_semi;
-		font-weight: normal;
+		font-weight: 600;
 	}
 	ul{
 		list-style: none;
@@ -28,6 +28,9 @@
 	display: inline-block;
 	.main-header &{
 		margin: 5px 0;
+		@include media-breakpoint-down(xxl) {
+			width: 136px;
+		}
 		@include media-breakpoint-down(lg) {
 			width: 128px;
 		}
@@ -69,8 +72,10 @@
 	.mn-item{
 		display: inline-block;
 		font-size: 1rem;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			font-size: 1.125rem;
+		}
+		@include media-breakpoint-up(lg) {
 			&:hover{
 				&>a{
 					background-color: transparent;
@@ -104,7 +109,10 @@
 			&>a{
 				height: 100%;
 				padding: 0 10px;
-				@include small-screen {
+				@include media-breakpoint-down(xxl) {
+					padding: 0 8px;
+				}
+				@include media-breakpoint-down(xl) {
 					padding: 0 5px;
 				}
 				&::before{
@@ -164,9 +172,13 @@
 			&>a{
 				line-height: 52px;
 				padding: 24px 16px;
+				@include media-breakpoint-down(xxl) {
+					padding-left:12px;
+					padding-right:12px;
+				}
 				@include media-breakpoint-down(xl) {
-					padding-left:10px;
-					padding-right:10px;
+					padding-left:8px;
+					padding-right:8px;
 				}
 				@include media-breakpoint-down(lg) {
 					line-height: 1.5;
