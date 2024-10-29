@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TTM X TMTH - Header & Footer</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/style/main.css?v=202410011117" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/style/main.css?v=20241029" />
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -91,11 +92,22 @@
 					</div>
 					<div class="col col-lg-auto">
 						<ul class="nav-info row justify-content-end gx-0">
-							<li class="mn-item col-auto"><a href="https://www.thaiticketmajor.com/search/?q=keyword" title="Search"><img class="mn-icon" src="assets/img/icon/search.svg"></a></li>
+							<li class="mn-item col-auto"><a href="https://www.thaiticketmajor.com/search/" title="Search"><img class="mn-icon" src="assets/img/icon/search.svg"></a></li>
 							<li class="mn-item col-auto d-none d-lg-block"><a href="https://booking.thaiticketmajor.com/delivery/delivery.php" title="ตรวจสอบสถานะจัดส่ง"><img class="mn-icon" src="assets/img/icon/delivery.svg"></a></li>
 							<li class="mn-item col-auto">
 								<a class="btn-user-signin" href="https://booking.thaiticketmajor.com/user/signin.php"><img class="mn-icon" src="assets/img/icon/user.svg"><span class="mn-text ms-2 d-none d-lg-inline-block">เข้าสู่ระบบ/สมัครสมาชิก</span></a>
-								<a class="btn-user-signin" style="display:none;" href="https://www.thaiticketmajor.com/user/editprofile.php"><img class="mn-icon" src="assets/img/icon/user.svg"><span class="mn-text ms-2 d-none d-lg-inline-block">บัญชีของฉัน</span></a>
+								<div class="btn-user-signin" style="display:none;">
+									<span class="mni-item"><img class="mn-icon" src="assets/img/icon/user.svg"><span class="mn-text ms-2 d-none d-lg-inline-block">บัญชีของฉัน</span></span>
+									<ul class="sub-menu">
+										<li class="sm-item"><strong>บัญชีของฉัน</strong></li>
+										<li><a href="https://www.thaiticketmajor.com/user/myticket.php">ตั๋วของฉัน</a></li>
+										<li><a href="https://www.thaiticketmajor.com/user/history.php">ประวัติการสั่งซื้อ</a></li>
+										<li><a href="https://www.thaiticketmajor.com/user/editprofile.php">แก้ไขข้อมูลส่วนตัว</a></li>
+										<li><a href="https://www.thaiticketmajor.com/user/changepassword.php">เปลี่ยนรหัสผ่าน</a></li>
+										<li><div class="border-top"></div></li>
+										<li><a href="https://www.thaiticketmajor.com/user/logout.php">ออกจากระบบ<i class="fa fa-sign-out ms-2" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
 					</div>
